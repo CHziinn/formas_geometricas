@@ -33,11 +33,13 @@ def area_losango():
     print (area)
 
 def area_trapezio():
-    B = float(input('Digite o valor de diagonal desejado: '))
-    b = float(input('Digite o valor de diagonal desejado: '))
+    B = float(input('Digite o valor de Base Maior desejado: '))
+    b = float(input('Digite o valor de base menor desejado: '))
     altura = float(input('Digite o valor de altura desejado: '))
     area = (B + b) * altura /2
     print (area)
+
+escolha = ['1', '2', '3', '4', '5', '6', '0']
 
 while True:
     print ('1 - Círculo')
@@ -49,6 +51,11 @@ while True:
     print ('6 - Trapézio')
 
     opcao = input('Escolha uma opção (1/2/3/4/5/6/7/0): ')
+    if opcao not in escolha:
+        print ('Escolha entre: 1/2/3/4/5/6/7/0')
+    else: 
+        continue
+
     if opcao == '1':
         area_circulo()
 
